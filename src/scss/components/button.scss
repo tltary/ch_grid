@@ -1,0 +1,101 @@
+.btn {
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: background-color .3s ease-in-out, color .3s ease-in-out, border-color .3s ease-in-out;
+	color: #3e3e3e;
+	display: inline-block;
+	border-radius: 5px;
+	font: {
+		size: 16px;
+	}
+	&:hover {
+		color: #000;
+	}
+	&-primary {
+		color: #fff;
+		background-color: #4a76a8;
+		border: {
+			width: 1px;
+			color: #4a76a8;
+			style: solid;
+		}
+		&:hover {
+			background-color: darken(#4a76a8, 15%);
+			border-color: darken(#4a76a8, 15%);
+			color: #fff;
+		}
+		&.btn-outline {
+			color: #4a76a8;
+			&:hover {
+				color: darken(#4a76a8, 15%);
+			}
+		}
+	}
+	&-success {
+		color: #fff;
+		background-color: #4CAF50;
+		border: {
+			width: 1px;
+			color: #4CAF50;
+			style: solid;
+		}
+		&:hover {
+			background-color: darken(#4CAF50, 15%);
+			border-color: darken(#4CAF50, 15%);
+			color: #fff;
+		}
+		&.btn-outline {
+			color: #4CAF50;
+			&:hover {
+				color: darken(#4CAF50, 15%);
+			}
+		}
+	}
+	&-danger {
+		color: #fff;
+		background-color: #FF5252;
+		border: {
+			width: 1px;
+			color: #FF5252;
+			style: solid;
+		}
+		&:hover {
+			background-color: darken(#FF5252, 15%);
+			border-color: darken(#FF5252, 15%);
+			color: #fff;
+		}
+		&.btn-outline {
+			color: #FF5252;
+			&:hover {
+				color: darken(#FF5252, 15%);
+			}
+		}
+	}
+	&-warning {
+		color: #000;
+		background-color: #ffc107;
+		border: {
+			width: 1px;
+			color: #ffc107;
+			style: solid;
+		}
+		&:hover {
+			background-color: darken(#ffc107, 15%);
+			border-color: darken(#ffc107, 15%);
+			color: #000;
+		}
+		&.btn-outline {
+			color: #ffc107;
+			&:hover {
+				color: darken(#ffc107, 15%);
+			}
+		}
+	}
+	&-outline {
+		background-color: transparent;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+	
+}

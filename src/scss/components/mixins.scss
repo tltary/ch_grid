@@ -1,0 +1,28 @@
+/*
+*    breakpoints:
+*        xs: 0,
+*        sm: 576px,
+*        md: 768px,
+*        lg: 960px,
+*        xl: 1200px
+*/
+
+@mixin breakpoint($name) {
+    @if $name == xs {
+        @media screen and (max-width: $breakpoint-xs) {
+            @content
+        }
+    } @else if $name == sm {
+        @media screen and (max-width: $breakpoint-sm) {
+            @content
+        }
+    } @else if $name == md {
+        @media screen and (max-width: $breakpoint-md) {
+            @content
+        }
+    } @else if $name == lg {
+        @media screen and (max-width: $breakpoint-lg) {
+            @content
+        }
+    }
+}

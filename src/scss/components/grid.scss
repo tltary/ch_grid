@@ -1,0 +1,92 @@
+.container {
+	width: $container-width-xl;
+  padding: {
+    right: $indent-space;
+    left: $indent-space;
+  }
+  margin: {
+    right: auto;
+    left: auto;
+  }
+  &-fluid {
+    width: 100%;
+    padding: {
+      right: $indent-space;
+      left: $indent-space;
+    }
+    margin: {
+      right: auto;
+      left: auto;
+    }
+  }
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: {
+	    right: -$indent-space;
+	    left: -$indent-space;
+    }
+}
+
+.#{$prefix} {
+  flex: auto;
+  padding: {
+    left: $indent-space;
+    right: $indent-space;
+  } 
+}
+
+@for $i from 1 through $grid_size {
+ 	.#{$prefix}-#{$i} {
+  		max-width: percentage($i / 12);
+  		flex: 0 0 percentage($i / 12);
+  		padding: {
+  			left: $indent-space;
+  			right: $indent-space;
+  		}
+  	}
+  	.#{$prefix}-offset-#{$i} {
+  		margin: {
+  			right: percentage($i / 12);
+  		}
+  	}
+}
+
+@each $size in lg, md, sm, xs {
+
+	@include breakpoint(#{$size}) {
+
+		@for $i from 1 through $grid_size {
+		 	.#{$prefix}-#{$size}-#{$i} {
+		  		max-width: percentage($i / 12);
+		  		flex: 0 0 percentage($i / 12);
+		  		padding: {
+		  			left: $indent-space;
+		  			right: $indent-space;
+		  		}
+		  	}
+		  	.#{$prefix}-#{$size}-offset-#{$i} {
+		  		margin: {
+		  			right: percentage($i / 12);
+		  		}
+		  	}
+		}
+
+		.container {
+			@if $size == xs {
+    			max-width: $container-width-xs;
+  			} @else if $size == sm {
+  				max-width: $container-width-sm;
+  			} @else if $size == md {
+  				max-width: $container-width-md;
+  			} @else if $size == lg {
+  				max-width: $container-width-lg;
+  			}
+		}
+
+	}
+
+}
