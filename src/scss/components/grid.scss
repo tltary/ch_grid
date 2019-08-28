@@ -41,8 +41,8 @@
 
 @for $i from 1 through $grid_size {
  	.#{$prefix}-#{$i} {
-  		max-width: percentage($i / 12);
-  		flex: 0 0 percentage($i / 12);
+  		max-width: percentage($i / $grid_size);
+  		flex: 0 0 percentage($i / $grid_size);
   		padding: {
   			left: $indent-space;
   			right: $indent-space;
@@ -50,7 +50,7 @@
   	}
   	.#{$prefix}-offset-#{$i} {
   		margin: {
-  			right: percentage($i / 12);
+  			right: percentage($i / $grid_size);
   		}
   	}
 }
@@ -61,8 +61,8 @@
 
 		@for $i from 1 through $grid_size {
 		 	.#{$prefix}-#{$size}-#{$i} {
-		  		max-width: percentage($i / 12);
-		  		flex: 0 0 percentage($i / 12);
+		  		max-width: percentage($i / $grid_size);
+		  		flex: 0 0 percentage($i / $grid_size);
 		  		padding: {
 		  			left: $indent-space;
 		  			right: $indent-space;
@@ -70,7 +70,7 @@
 		  	}
 		  	.#{$prefix}-#{$size}-offset-#{$i} {
 		  		margin: {
-		  			right: percentage($i / 12);
+		  			right: percentage($i / $grid_size);
 		  		}
 		  	}
 		}
